@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --primary-color: #03045e;
+    --secondary-color: #90e0ef;
+    --accent1-color: #00b4d8;
+    --accent2-color: #0077b6;
+  
+    --heading-font: "Freeman", sans-serif; /* Updated */
+    --paragraph-font: "Montserrat", sans-serif;  /* Updated */
+  
+    --nav-background-color: #00b4d8;
+    --nav-link-color: #fff;
+    --nav-hover-link-color: #fff;
+    --nav-hover-background-color: #0056b3;
+  }
+  
+  body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+  }
+  
+  header {
+    padding: 20px;
+    background-color: var(--accent1-color);
+  }
+  
+  p {
+    padding: 10px 0;
+  }
+  
+  nav {
+    background-color: var(--nav-background-color);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center
+  }
+  
+  nav a {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 1rem;
+  }
+  
+  nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+  }
+  
+  nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+  }
