@@ -117,8 +117,6 @@ nav a:focus::after {
     font-size: 3rem;
 }
 
-
-
 .hero article img {
     float: right;
     margin-left: 1rem;
@@ -192,6 +190,8 @@ footer {
     max-width: 1200px;
     box-sizing: border-box;
     padding: 1rem;
+    flex-wrap: nowrap;
+    text-align: center;
 }
 
 footer p {
@@ -205,18 +205,163 @@ footer .sociallinks {
 
 footer .sociallinks a {
     margin: 0 0.5rem;
+    position: relative;
 }
 
 footer .sociallinks img {
     height: 30px;
     vertical-align: middle;
+    transition: filter 0.3s;
 }
 
-.boxed {
-    border: 1px solid var(--accent-color);
-    padding: 1rem;
+footer .sociallinks a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+footer .sociallinks a:hover::after,
+footer .sociallinks a:focus::after {
+    width: 100%;
+}
+
+footer .wireframe-link {
+    margin: 0 1rem;
+}
+
+footer .wireframe-link a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+footer .wireframe-link a:hover,
+footer .wireframe-link a:focus {
+    background-color: var(--accent-color);
+}
+
+button {
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s;
+    z-index: -1;
+}
+
+button:hover {
+    color: var(--white-color);
+    transform: translateY(-2px);
+}
+
+button:hover::after {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.contact-form-section {
+    width: 100%;
+    max-width: 1200px; 
     margin: 1rem auto;
-    max-width: 80%;
-    background-color: var(--background-color);
+    padding: 1rem;
+    background-color: var(--white-color);
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-section label {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+.contact-form-section input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.contact-form-section .radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.contact-form-section .radio-group label {
+    display: flex;
+    align-items: center;
+}
+
+.contact-form-section .radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.contact-form-section button {
+    align-self: center;
+}
+
+.team-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.team-section figure {
+    text-align: center;
+    margin: 1rem;
+}
+
+.team-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-section figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
 }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Blue Rafting Company</title>
+    <meta name="description" content="Get in touch with Blue Rafting Company. Contact us for inquiries, reservations, and suggestions.">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Rafting Company Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <div class="company-info">
+                <p><strong>Address:</strong> 123 River Lane, San Francisco</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> info@bluerafting.com</p>
+            </div>
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456!2d-122.4194155!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c5bcd3b1d%3A0xd907a5e3c1d1234!2s123%20River%20Lane%2C%20Rapids%20City%2C%20CA%2094115!5e0!3m2!1sen!2sus!4v1618324826471!5m2!1sen!2sus" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <figure>
+                <img src="images/employee1.jpg" alt="Employee 1">
+                <figcaption>John Doe - CEO</figcaption>
+            </figure>
+            <figure>
+                <img src="images/employee2.jpg" alt="Employee 2">
+                <figcaption>Jane Smith - Guide</figcaption>
+            </figure>
+            <figure>
+                <img src="images/employee3.jpg" alt="Employee 3">
+                <figcaption>Mike Johnson - Operations</figcaption>
+            </figure>
+        </section>        
+        <section class="contact-form-section">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <div class="radio-group">
+                    <input type="radio" id="general-inquiry" name="purpose" value="general-inquiry" required>
+                    <label for="general-inquiry">General Inquiry</label>
+
+                    <input type="radio" id="reservation-question" name="purpose" value="reservation-question">
+                    <label for="reservation-question">Reservation Question</label>
+
+                    <input type="radio" id="website-suggestion" name="purpose" value="website-suggestion">
+                    <label for="website-suggestion">Website Suggestion</label>
+                </div>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blue Rafting Company.</p>
+        <nav class="sociallinks">
+            <a href="https://facebook.com">
+                <img src="images/Facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/Instagram.png" alt="Instagram">
+            </a>
+        </nav>
+        <div class="wireframe-link">
+            <a href="https://app.moqups.com/CqdO9RE1dsEXINsJ0aD2KU54vwKZWhJo/view/page/ad64222d5" target="_blank">View Wireframe</a>
+        </div>
+    </footer>
+</body>
+</html>
